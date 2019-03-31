@@ -1,0 +1,15 @@
+extends ./layout
+block content
+    article
+        form(action='/home/'+row_in.id+'/edit' method='post')
+            p
+                input(type='text' name='title_edit' value=row_in.title placeholder='제목')
+            p
+                textarea(name='description_edit' placeholder='본문 내용')=row_in.description
+            p
+                input(type='text' name='author_edit' value=row_in.author placeholder='작성자')
+            p
+                input(type='submit' value='수정')
+        ul
+            li
+                a(href='/home/'+ row_in.id+'/delete') 삭제하기

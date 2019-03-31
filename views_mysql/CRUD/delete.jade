@@ -1,0 +1,8 @@
+extends ./layout
+block contend
+    article
+        h1= '정말 '+row_in.title+'를 지우시겠습니까?'
+        form(action='/home/'+row_in.id+'/delete' method='post')
+            p
+                input(type='submit' value='예')
+                a(href='/home/'+row_in.id) 아니요

@@ -1,0 +1,12 @@
+extend ../CRUD/layout
+block content
+
+  form(action='/auth/register', method='post')
+    p
+      input(type='text', name='username', placeholder='username')
+    p
+      input(type='text', name='password', placeholder='password')
+    p
+      input(type='text', name='displayName', placeholder='displayName')
+    p
+      input(type='submit')

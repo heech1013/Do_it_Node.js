@@ -1,0 +1,18 @@
+extends ./layout
+block content
+    article
+        if (row)
+            h2=row.title
+            =row.description
+            div= 'by '+ row.author
+        else
+            h2 환영합니다!
+            | HOP 홈페이지입니다.
+    ul
+        li
+            a(href='/home/add') 새로운 게시물 작성
+        if (row)
+            li
+                a(href='/home/'+row.id+'/edit') 수정
+            li
+                a(href='/home/'+row.id+'/delete') 삭제

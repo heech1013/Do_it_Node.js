@@ -1,0 +1,12 @@
+extends ./layout
+block content
+    article
+        form(action='/home/add' method='post')
+            p
+                input(type='text' name='title_input' placeholder='제목')
+            p
+                textarea(name='description_input' placeholder='본문 내용')
+            p
+                input(type='text' name='author_input' placeholder='작성자')
+            p
+                input(type='submit')
